@@ -6,7 +6,7 @@ var dict = YAML.load(path.join(__dirname, 'tranzlator.yml'));
 
 function translate(phrase) {
   // var words = phrase.toUpperCase().split(/(?: |,|\.|\!)+/);
-  var words = phrase.split(/(?: |,|\.|\!)+/);
+  var words = phrase.toLowerCase().split(/(?: |,|\.|\!)+/);
   var translation = '';
 
   words.forEach(function(word) {
